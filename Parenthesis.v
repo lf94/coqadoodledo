@@ -24,7 +24,6 @@ Fixpoint _position_of_matching_parenthesis (str : string) (position : nat) (coun
 Definition position_of_matching_parenthesis (str : string) (position : nat) : Option :=
 _position_of_matching_parenthesis (substring (position + 1) (length str) str) position 1.
 
-
 Theorem any_empty_position_is_none : forall p : nat,
 position_of_matching_parenthesis EmptyString p = None.
 Proof.
